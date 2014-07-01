@@ -20,7 +20,8 @@ Use our API to send a request to Polychemy's customization server. <br>
 Polychemy's Servers will then process your request and genrate the relevant custom Jewelry design based on your specification. A link to download a Low Res 3D Model File for display will be returned to you.<br>
 You can then proceed to download the 3D model file or display it on a web browser with WEBGL.<br>
 
-User can then place an order on our order system and have your jwelry manufactured and drop shipped to a location you specify. Payment must be made before hand.
+User can then place an order on our order system and once payment has been cleared.<br>
+We will begin manufacturing and drop ship to your specified Location.
 
 A Basic Example
 ===========
@@ -82,3 +83,10 @@ To Download the obj file send GET Request too:<br>
 PASS - <em>Your Uniqie acess token.</em><br>
 getfile - <em>File type.</em> <br>
 ID - <em> The Modle id. </em>
+
+This will return the OBJ file for download.
+And now you're done! All you need to do now is build a WEBGL viewer to view the 3D file, and a simple interface to customizae tthe jwelry<br>
+
+Placing Orders
+=============
+Coming Soon..
