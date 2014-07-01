@@ -22,7 +22,7 @@ You can then proceed to download the 3D model file or display it on a web browse
 
 User can then place an order on our order system and have your jwelry manufactured and drop shipped to a location you specify. Payment must be made before hand.
 
-The Basics
+A Basic Example
 ===========
 Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
 
@@ -32,16 +32,15 @@ Send a GET Request to our modelGEN server : http://54.191.4.213/modelGEN.php<br>
 http://54.191.4.213/modelGEN.php?PASS=3846283&script=NameNecklace.py&arg0=2&arg1=grace&arg2=grace
 </code>
 
-PASS - Your Uniqie acess token.<br>
-script - The jwelry design type. <br>
-arg0 - unique variables required for this jewelry design. See below refrence Guid for more info.<br>
-arg2 - unique variables required for this jewelry design. See below refrence Guid for more info.<br>
-arg3 - unique variables required for this jewelry design. See below refrence Guid for more info.<br>
+PASS - <em>Your Uniqie acess token.</em><br>
+script - <em>The jwelry design type.</em> <br>
+arg0 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
+arg2 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
+arg3 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
 
 The JSNOP Response:<br>
 
 <blockquote>
-JSNOP Response:<br>
 create3DModel(<br>
 <br>
 {<br>
@@ -63,3 +62,13 @@ create3DModel(<br>
 <br>
 );<br>
 </blockquote>
+
+<br>
+Important Variables:<em>
+file - <em>The URL to download the 3d OBJ file.<br>
+material - <em>the material file assosiatd with this OBJ.<br>
+StillRender - <em>A single still render of the genrated design in PNG with alpha.<br>
+Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.<br>
+Volume - <em>The total volume ammount of this design.<br>
+WholeSalePrice - <em>The wholesale price for this design.<br>
+Recommened Retail Price. - <em>The recommened retail price for this design.<br>
