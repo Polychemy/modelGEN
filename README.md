@@ -64,7 +64,7 @@ create3DModel(<br>
 </blockquote>
 
 <br>
-Important Variables:<em>
+Important Variables:<br>
 file - <em>The URL to download the 3d OBJ file.<br>
 material - <em>the material file assosiatd with this OBJ.<br>
 StillRender - <em>A single still render of the genrated design in PNG with alpha.<br>
@@ -72,3 +72,13 @@ Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.<br>
 Volume - <em>The total volume ammount of this design.<br>
 WholeSalePrice - <em>The wholesale price for this design.<br>
 Recommened Retail Price. - <em>The recommened retail price for this design.<br>
+
+<b>2)Downloading 3D Model File.</b><br>
+In the next step, we would want to download the 3d model file or stream it to a webGL viewer.<br>
+
+To Download the obj file send GET Request too:<br>
+<code>http://54.191.4.213/ModelDATABASE.php?PASS=321323&getfile=PNG&ID=584351</code>
+<br>
+PASS - <em>Your Uniqie acess token.</em><br>
+getfile - <em>File type.</em> <br>
+ID - <em> The Modle id. </em>
