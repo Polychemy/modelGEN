@@ -24,6 +24,8 @@ User can then place an order on our order system and have your jwelry manufactur
 
 The Basics
 ===========
+Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
+
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Send a GET Request to our modelGEN server : http://54.191.4.213/modelGEN.php<br>
 <code>
@@ -35,6 +37,8 @@ script - The jwelry design type. <br>
 arg0 - unique variables required for this jewelry design. See below refrence Guid for more info.<br>
 arg2 - unique variables required for this jewelry design. See below refrence Guid for more info.<br>
 arg3 - unique variables required for this jewelry design. See below refrence Guid for more info.<br>
+
+The JSNOP Response:<br>
 
 <blockquote>
 JSNOP Response:<br>
