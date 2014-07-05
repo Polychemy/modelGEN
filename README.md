@@ -2,7 +2,7 @@ modelGEN
 ========
 
 Polychemy's Model Generator API. <br>
-Use this API to create and customize any of the available Polychemy Jewelry.
+The modelGEN API allows anyone to create and customize any of the available Polychemy Jewelry.
 This API Also provides tools to place and ship orders to a location you specify.
 
 This API Is restricted access only, permission is granted to selected sites. 
