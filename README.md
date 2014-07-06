@@ -7,7 +7,6 @@ The modelGEN API allows anyone to create and customize any of the available Poly
 This API Is restricted access only, permission is granted to selected sites. 
 If you are intrested in implimenting our apps on your site. Do contact us at contact@polychemy.com.
 
-*Please note that you can only make 1 request per session. Only after the request is completed, will you be abel to make more requests
 
 <center>
 For an Example of these apps in action, check out our main site here:<br>
@@ -22,6 +21,8 @@ You can then proceed to download the 3D model file or display it on a web browse
 
 User can then place an order on our order system and once payment has been cleared.<br>
 We will begin manufacturing and drop ship to your specified Location.
+
+*Please note that you can only make 1 request per session. Only after the request is completed, will you be abel to make more requests
 
 A Basic Example
 ===========
