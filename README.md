@@ -31,7 +31,7 @@ Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Send a GET Request to our modelGEN server : http://polychemy3d.com/modelGEN.php<br>
 <code>
-http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&arg0=2&arg1=grace&arg2=grace
+http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=false&material=silver&arg0=2&arg1=grace&arg2=grace
 </code>
 
 PASS - <em>Your Uniqie acess token.</em><br>
