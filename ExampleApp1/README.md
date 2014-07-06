@@ -1,7 +1,12 @@
 Polychemy Example App 1
 =======================
 
-A basic app to demonstrate the modelGen System.
+A basic app to demonstrate the Polychemy's modelGen System.
 
-This app uses the following libaries:<br>
-THREE.js
+This app uses the following Javascript libaries:<br>
+THREE.js<br>
+jquery<br>
+Detector.js<br>
+OBJMTLLoader.js
+
+This app is written in Javascript and HTML.
