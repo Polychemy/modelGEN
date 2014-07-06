@@ -22,7 +22,6 @@ You can then proceed to download the 3D model file or display it on a web browse
 User can then place an order on our order system and once payment has been cleared.<br>
 We will begin manufacturing and drop ship to your specified Location.
 
-*Please note that you can only make 1 request per session. Only after the request is completed, will you be abel to make more requests
 
 A Basic Example
 ===========
