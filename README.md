@@ -97,11 +97,12 @@ set turntable variable too "True" (Case Sensitive) and our system will render 6 
 
 You can then download these PNG images (with alpha) and display it on your borwser if nessary.<br>
 Here's an example GET request that will trigger a turntable render:<br>
-
+<p>
 <code>
 http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=True&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
-Download these images like these:
+</p>
+Download these images like these:<br>
 http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=0<br>
 http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=1<br>
 http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=2<br>
