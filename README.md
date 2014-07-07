@@ -90,6 +90,20 @@ ID - <em> The Modle id. </em>
 This will return the OBJ file for download.
 And now you're done! All you need to do now is build a WEBGL viewer to view the 3D file, and a simple interface to customizae tthe jwelry<br>
 
+Rendering a Turntable.
+=======================
+Rendering a still image turntable is especially useful if the user does not support WebGL.<br>
+set turntable variable too "True" (Case Sensitive) and our system will render 6 images of the jewelry design in different rotations (1 full revolution).<br>
+
+You can then download these PNG images (with alpha) and display it on your borwser if nessary.<br>
+Here's an example GET request that will trigger a turntable render:<br>
+
+<code>
+http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=True&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
+</code>
+
+
+
 Placing Orders
 =============
 Coming Soon..
