@@ -90,8 +90,8 @@ ID - <em> The Modle id. </em>
 This will return the OBJ file for download.
 And now you're done! All you need to do now is build a WEBGL viewer to view the 3D file, and a simple interface to customizae tthe jwelry<br>
 
-Rendering a Turntable.
-=======================
+<b>2b)Rendering a Turntable.</b><br>
+
 Rendering a still image turntable is especially useful if the user does not support WebGL.<br>
 set turntable variable too "True" (Case Sensitive) and our system will render 6 images of the jewelry design in different rotations (1 full revolution).<br>
 
@@ -101,8 +101,15 @@ Here's an example GET request that will trigger a turntable render:<br>
 <code>
 http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=True&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
+Download these images like these:
+http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=0<br>
+http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=1<br>
+http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=2<br>
+http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=3<br>
+http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=4<br>
+http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=5<br>
 
-
+Where ID Is the FolderNumber you recive from the JSNOP response.
 
 Placing Orders
 =============
