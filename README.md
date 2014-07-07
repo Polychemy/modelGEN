@@ -29,7 +29,7 @@ A Basic Example
 Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
-Send a GET Request to our modelGEN server : http://polychemy3d.com/modelGEN.php<br>
+Send a GET Request to our modelGEN server :<br>
 <code>
 http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
