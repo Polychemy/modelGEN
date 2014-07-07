@@ -76,6 +76,7 @@ Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.<br>
 Volume - <em>The total volume ammount of this design.<br>
 WholeSalePrice - <em>The wholesale price for this design.<br>
 Recommened Retail Price. - <em>The recommened retail price for this design.<br>
+FolderNumber - Used to identify the model. Also known as the Model ID.
 
 <b>2)Downloading 3D Model File.</b><br>
 In the next step, we would want to download the 3d model file or stream it to a webGL viewer.<br>
@@ -85,7 +86,7 @@ To Download the obj file send GET Request too:<br>
 <br>
 PASS - <em>Your Uniqie acess token.</em><br>
 getfile - <em>File type.</em> <br>
-ID - <em> The Modle id. </em>
+ID - <em> The FolderNumber you recieve from the JSNOP response. </em>
 
 This will return the OBJ file for download.
 And now you're done! All you need to do now is build a WEBGL viewer to view the 3D file, and a simple interface to customizae tthe jwelry<br>
@@ -110,7 +111,7 @@ http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=3<br>
 http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=4<br>
 http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=5<br>
 
-Where ID Is the FolderNumber you recive from the JSNOP response.
+Where "ID" Is the FolderNumber you recive from the JSNOP response and "num" is the image number.
 
 Placing Orders
 =============
