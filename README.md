@@ -30,11 +30,13 @@ Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Send a GET Request to our modelGEN server : http://polychemy3d.com/modelGEN.php<br>
 <code>
-http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=false&material=silver&arg0=2&arg1=grace&arg2=grace
+http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
 
 PASS - <em>Your Uniqie acess token.</em><br>
 script - <em>The jwelry design type.</em> <br>
+turnatble - <em>option to render turntable.</em> <br>
+Material <em>Jewelry Material.</em> <br>
 arg0 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
 arg2 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
 arg3 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
