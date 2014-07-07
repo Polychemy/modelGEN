@@ -9,8 +9,10 @@ jquery<br>
 Detector.js<br>
 OBJMTLLoader.js
 
-This app is written in Javascript and HTML.
 
-This App creates Polychemy's Roman Name Ring and displays it on our webGL viewer.
+This App creates Polychemy's Roman Name Ring and displays it on our webGL viewer.<br>
 If user does not have WebGL Enabled, a turntable render is requested instead.
 
+<p>
+<a href="http://www.polychemy.com/AppExample1/RomanRing.html">See a live example of this app here</a>
+</p>
