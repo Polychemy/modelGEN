@@ -47,22 +47,22 @@ The JSNOP Response:<br>
 <blockquote>
 create3DModel(<br>
 <br>
-{<br>
-"Output": "SUCESS",<br>
-"file": "DONE", <br>
-"material": "DONE", <br>
-"StillRender": "http://54.191.4.213/ModelDATABASE.php?getfile=PNG&ID=584351", <br>
-"FolderNumber": "584351", <br>
-"AppCallID": "108523", <br>
-"boundingX": "19.795589447021484",<br>
-"boundingY": "7.932041168212891",<br>
-"boundingZ": "19.830873489379883",<br>
-"volume": "0.3737025921655804",<br>
-"GoldPlateWholesale": "83",<br>
-"GoldPlateRetail": "109.99",<br>
-"SilverWholesale": "99",<br>
-"SilverRetail": "129.99"<br>
-}<br>
+	{<br>
+				"Output": "SUCESS",<br>
+				"file": "DONE", <br>
+				"material": "DONE", <br>
+				"StillRender": "http://54.191.4.213/ModelDATABASE.php?getfile=PNG&ID=584351", <br>
+				"FolderNumber": "584351", <br>
+				"AppCallID": "108523", <br>			
+				"boundingX": "19.795589447021484",<br>
+				"boundingY": "7.932041168212891",<br>
+				"boundingZ": "19.830873489379883",<br>
+				"volume": "0.3737025921655804",<br>
+				"GoldPlateWholesale": "83",<br>
+				"GoldPlateRetail": "109.99",<br>
+				"SilverWholesale": "99",<br>
+				"SilverRetail": "129.99"<br>
+	}<br>
 <br>
 );<br>
 </blockquote>
