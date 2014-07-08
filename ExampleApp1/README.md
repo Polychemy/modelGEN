@@ -20,5 +20,5 @@ If user does not have WebGL Enabled, a turntable render is requested instead.<br
 You can customize this jewelry design and change it's material. Retail price is upated live as well.
 
 <p>
-<a href="http://www.polychemy.com/AppExample1/RomanRing.html">See a live example of this app here</a>
+<a href="http://www.polychemy.com/AppExample1/index.php">See a live example of this app here</a>
 </p>
