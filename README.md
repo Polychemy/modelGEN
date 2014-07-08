@@ -93,21 +93,21 @@ Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.<br>
 Volume - <em>The total volume ammount of this design.<br>
 WholeSalePrice - <em>The wholesale price for this design.<br>
 Recommened Retail Price. - <em>The recommened retail price for this design.<br>
-FolderNumber - Used to identify the model. Also known as the Model ID.
+FolderNumber - Used to identify the model. Also known as the Model ID.<p>
 
 <b>2)Downloading 3D Model File.</b><br>
 In the next step, we would want to download the 3d model file or stream it to a webGL viewer.<br>
 
-To Download the obj file send GET Request too:<br>
+To Download the obj file send GET Request too:<p>
 <code>http://54.191.4.213/ModelDATABASE.php?PASS=321323&getfile=PNG&ID=584351</code>
-<br>
+<p>
 PASS - <em>Your Uniqie acess token.</em><br>
 getfile - <em>File type.</em> <br>
 ID - <em> The FolderNumber you recieve from the JSNOP response. </em>
-
+<p>
 This will return the OBJ file for download.
 And now you're done! All you need to do now is build a WEBGL viewer to view the 3D file, and a simple interface to customizae tthe jwelry<br>
-
+<p>
 <b>2b)Rendering a Turntable.</b><br>
 
 Rendering a still image turntable is especially useful if the user does not support WebGL.<br>
