@@ -86,14 +86,14 @@ create3DModel(<br>
 
 <br>
 Important Variables:<br>
-file - <em>The URL to download the 3d OBJ file.<br>
-material - <em>the material file assosiatd with this OBJ.<br>
-StillRender - <em>A single still render of the genrated design in PNG with alpha.<br>
-Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.<br>
-Volume - <em>The total volume ammount of this design.<br>
-WholeSalePrice - <em>The wholesale price for this design.<br>
-Recommened Retail Price. - <em>The recommened retail price for this design.<br>
-FolderNumber - Used to identify the model. Also known as the Model ID.<p>
+file - <em>The URL to download the 3d OBJ file.</em><br>
+material - <em>the material file assosiatd with this OBJ.</em><br>
+StillRender - <em>A single still render of the genrated design in PNG with alpha.</em><br>
+Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.</em><br>
+Volume - <em>The total volume ammount of this design.</em><br>
+WholeSalePrice - <em>The wholesale price for this design.</em><br>
+Recommened Retail Price. - <em>The recommened retail price for this design.</em><br>
+FolderNumber - <em>Used to identify the model. Also known as the Model ID.</em><p>
 
 <b>2)Downloading 3D Model File.</b><br>
 In the next step, we would want to download the 3d model file or stream it to a webGL viewer.<br>
