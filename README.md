@@ -4,7 +4,7 @@ modelGEN
 Polychemy's Model Generator API. <br>
 The modelGEN API allows anyone to create and customize any of the available Polychemy Jewelry.
 
-This API Is restricted access only, permission is granted to selected sites. 
+This API requires an USER KEY, for access.
 If you are intrested in implimenting our apps on your site. Do contact us at contact@polychemy.com.
 
 
@@ -15,18 +15,26 @@ http://www.polychemy.com
 
 How Does it Work?
 =================
-Use our API to send a request to Polychemy's customization server. <br>
-Polychemy's Servers will then process your request and genrate the relevant custom Jewelry design based on your specification. A link to download a Low Res 3D Model File for display will be returned to you.<br>
-You can then proceed to download the 3D model file or display it on a web browser with WEBGL.<br>
-ALternatively, you can request a still image turn table render instead.<br>
-
-User can then place an order on our order system and once payment has been cleared.<br>
-We will begin manufacturing and drop ship to your specified Location.
+1)Authenticate your self with your [USER KEY]<br>
+2)Send request to polychemy servers with type of jewlery, material and other customization settings.<br>
+3)A link to download a low res OBJ file for display will be returned to you. (alternatively you can request a turntable render instead)<br>
+4)Place order on our Orde Que.<br>
+5)After payment has been cleared, we will manufacture and drop ship your Item.<br>
 
 
 A Basic Example
 ===========
 Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
+
+<b>1) Authenticate your self.</b><br>
+Use your USER KEY to genrate a acess token that you can use on our apps.<br>
+Send a GET request to the following URL to recieve a 2 hour acess token:<br>
+<code>
+http://polychemy3d.com/ModelDATABASE.php?getaccessKey=[USER KEY]
+</code>
+<br>
+Where [USER KEY] is your user key.<br>
+*Keep your user key safe! It's best to request for Access tokens only on serverside scripts like PHP. DO NOT expose your USER KEY to the world wide web!.*
 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Send a GET Request to our modelGEN server :<br>
