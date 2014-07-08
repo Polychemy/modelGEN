@@ -50,7 +50,7 @@ Send a GET Request to our modelGEN server :<br>
 <code>
 http://polychemy3d.com/modelGEN.php?TOKEN=3846283&script=NameNecklace.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
-
+<p>
 TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
 script - <em>The jwelry design type.</em> <br>
 turnatble - <em>option to render turntable.</em> <br>
