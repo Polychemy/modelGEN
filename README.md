@@ -99,9 +99,8 @@ FolderNumber - Used to identify the model. Also known as the Model ID.<p>
 In the next step, we would want to download the 3d model file or stream it to a webGL viewer.<br>
 
 To Download the obj file send GET Request too:<p>
-<code>http://54.191.4.213/ModelDATABASE.php?PASS=321323&getfile=PNG&ID=584351</code>
+<code>http://54.191.4.213/ModelDATABASE.php?getfile=PNG&ID=584351</code>
 <p>
-PASS - <em>Your Uniqie acess token.</em><br>
 getfile - <em>File type.</em> <br>
 ID - <em> The FolderNumber you recieve from the JSNOP response. </em>
 <p>
@@ -117,7 +116,7 @@ You can then download these PNG images (with alpha) and display it on your borws
 Here's an example GET request that will trigger a turntable render:<br>
 <p>
 <code>
-http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=True&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
+http://polychemy3d.com/modelGEN.php?TOKEN=3846283&script=NameNecklace.py&turntable=True&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
 </p>
 Download these images like these:<br>
