@@ -9,8 +9,8 @@ If you are intrested in implimenting our apps on your site. Do contact us at con
 
 
 <center>
-For an Example of these apps in action, check out our main site here:<br>
-http://www.polychemy.com
+For an Example of this app in action:<br>
+http://www.polychemy.com/AppExample1/index.php
 </center>
 
 How Does it Work?
