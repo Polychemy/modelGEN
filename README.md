@@ -38,19 +38,20 @@ http://polychemy3d.com/ModelDATABASE.php?getaccessKey=[USER KEY]
 Where [USER KEY] is your user key.<br>
 *Keep your user key safe! It's best to request for Access tokens only on serverside scripts like PHP. DO NOT expose your USER KEY to the world wide web!.*
 <p>
-If Authentication is sucessful, you will recieve a numerical ACESSTOKEN.
+If Authentication is sucessful, you will recieve a numerical ACCESS TOKEN.
 <p>
 <code>
 434234365
 </code>
+<p>
 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Send a GET Request to our modelGEN server :<br>
 <code>
-http://polychemy3d.com/modelGEN.php?PASS=3846283&script=NameNecklace.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
+http://polychemy3d.com/modelGEN.php?TOKEN=3846283&script=NameNecklace.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
 
-PASS - <em>Your Uniqie acess token.</em><br>
+TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
 script - <em>The jwelry design type.</em> <br>
 turnatble - <em>option to render turntable.</em> <br>
 Material <em>Jewelry Material.</em> <br>
