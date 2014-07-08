@@ -3,15 +3,19 @@ Polychemy Example App 1
 
 A basic app to demonstrate Polychemy's modelGen System.
 
+This APp Requires:<br>
+PHP cURL, HTML, Javascript and CSS.
+
 This app uses the following Javascript libaries:<br>
 THREE.js<br>
-jquery<br>
+jquery.js<br>
 Detector.js<br>
-OBJMTLLoader.js
+OBJMTLLoader.js<br>
+*All Are provided within /js folder.
 
 
 This App creates Polychemy's Roman Name Ring and displays it on our webGL viewer.<br>
-If user does not have WebGL Enabled, a turntable render is requested instead.
+If user does not have WebGL Enabled, a turntable render is requested instead.<br>
 
 You can customize this jewelry design and change it's material. Retail price is upated live as well.
 
