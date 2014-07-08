@@ -1,5 +1,5 @@
-modelGEN
-========
+<h1>modelGEN</h1>
+
 
 Polychemy's Model Generator API. <br>
 The modelGEN API allows anyone to create and customize any of the available Polychemy Jewelry.
@@ -61,6 +61,9 @@ TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
 script - <em>The jwelry design type.</em> <br>
 turnatble - <em>option to render turntable.</em> <br>
 Material <em>Jewelry Material.</em> <br>
+arg0 - <em>unique variables required for this jewelry design. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+arg2 - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+arg3 - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
 
 The JSNOP Response:<br>
 
