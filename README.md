@@ -16,8 +16,9 @@ http://www.polychemy.com
 How Does it Work?
 =================
 1)Authenticate your self with your [USER KEY]<br>
-2)Send request to polychemy servers with type of jewlery, material and other customization settings.<br>
-3)A link to download a low res OBJ file for display will be returned to you. (alternatively you can request a turntable render instead)<br>
+2)Send a request to customize Polychemy Jewerly. (material, size, custom text, Jewlery type etc)<br>
+3)Our system will create a 3D Model of the Jewlery you requested. A link to download a low res OBJ file for display will be returned to you. (alternatively you can request a turntable render instead)<br>
+5)Display your custom 3D Jewelry Design on a browser with WEBGL, or just show still images.<br>
 4)Place order on our Orde Que.<br>
 5)After payment has been cleared, we will manufacture and drop ship your Item.<br>
 
