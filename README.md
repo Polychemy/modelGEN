@@ -39,6 +39,7 @@ Where [USER KEY] is your user key.<br>
 *Keep your user key safe! It's best to request for Access tokens only on serverside scripts like PHP. DO NOT expose your USER KEY to the world wide web!.*
 <p>
 If Authentication is sucessful, you will recieve a numerical ACESSTOKEN.
+<p>
 <code>
 434234365
 </code>
