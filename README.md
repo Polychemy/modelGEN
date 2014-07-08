@@ -11,6 +11,11 @@ If you are intrested in implimenting our apps on your site. Do contact us at con
 <center>
 For an Example of this app in action:<br>
 http://www.polychemy.com/AppExample1/index.php
+
+<p>
+
+For the full API Refrnece guide, see here:<br>
+http://www.polychemy.com/php/PolychemyAPI.php
 </center>
 
 How Does it Work?
@@ -56,9 +61,9 @@ TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
 script - <em>The jwelry design type.</em> <br>
 turnatble - <em>option to render turntable.</em> <br>
 Material <em>Jewelry Material.</em> <br>
-arg0 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
-arg2 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
-arg3 - <em>unique variables required for this jewelry design. See below refrence Guid for more info.</em><br>
+arg0 - <em>unique variables required for this jewelry design. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+arg2 - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+arg3 - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
 
 The JSNOP Response:<br>
 
