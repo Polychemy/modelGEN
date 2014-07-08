@@ -2,7 +2,6 @@
 
 
 //Important Variables, change this to customise the app:
-	var USER = "";
 	var script = "RomanRing.py";
 	var material = "";
 	var arg0 = "";
@@ -97,14 +96,6 @@ var renderTurntable = "False";
 				var Materialfield = document.getElementById("Material");
 				var RingSize = document.getElementById("RingSize");
 				
-				//change matcap material based on chosen material
-				//Material Properties
-				var matcolor;
-
-				  matcolor = "matcap/"+Materialfield.value+".jpg";				
-		
-				//Set shaders for both shading groups on text.
-				material2.uniforms.tMatCap.value = THREE.ImageUtils.loadTexture(matcolor);
 
 				//Send request to polychemy servers.
 				execScript(script,renderTurntable, Materialfield.value, CustomText.value, RingSize.value, "", "")
@@ -146,70 +137,7 @@ var renderTurntable = "False";
 
 				scene = new THREE.Scene();
 
-				//Set second material, this is used for umprings and assesories.
-				  material2 = new THREE.ShaderMaterial({
-                uniforms: {
-                    tNormal: {
-                        type: 't',
-                        value: THREE.ImageUtils.loadTexture('normal/243-normal.jpg')
-                    },
-                    tMatCap: {
-                        type: 't',
-                        value: THREE.ImageUtils.loadTexture('matcap/jeepster_skinmat2.jpg')
-                    },
-                    time: {
-                        type: 'f',
-                        value: 0
-                    },
-                    bump: {
-                        type: 'f',
-                        value: 0
-                    },
-                    noise: {
-                        type: 'f',
-                        value: .04
-                    },
-                    repeat: {
-                        type: 'v2',
-                        value: new THREE.Vector2(1, 1)
-                    },
-                    useNormal: {
-                        type: 'f',
-                        value: 0
-                    },
-                    useRim: {
-                        type: 'f',
-                        value: 0
-                    },
-                    rimPower: {
-                        type: 'f',
-                        value: 2
-                    },
-                    useScreen: {
-                        type: 'f',
-                        value: 0
-                    },
-                    normalScale: {
-                        type: 'f',
-                        value: .5
-                    },
-                    normalRepeat: {
-                        type: 'f',
-                        value: 1
-                    }
-                },
-                vertexShader: document.getElementById('vertexShader').textContent,
-                fragmentShader: document.getElementById('fragmentShader').textContent,
-                wrapping: THREE.ClampToEdgeWrapping,
-                shading: THREE.SmoothShading,
-                side: THREE.DoubleSide
-            });
-            material2.uniforms.tMatCap.value.wrapS = material2.uniforms.tMatCap.value.wrapT = THREE.ClampToEdgeWrapping;
-            material2.uniforms.tNormal.value.wrapS = material2.uniforms.tNormal.value.wrapT = THREE.RepeatWrapping;
-			
-			
-			
-			
+
 			//create lights
 			hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
 				hemiLight.color.setHSL( 1, 1, 1 );
@@ -285,7 +213,7 @@ var renderTurntable = "False";
 				loadedmodel = new THREE.Mesh();
 				//this fucnction send a jsnop request to server. 
 				//The adressse to generate the 3D model.
-				var serversdresse = server+"modelGEN.php?timtest="+Math.floor((Math.random()*100)+1)+"&script="+script+"&material="+material+"&turntable="+turntable+"&arg0="+arg0+"&arg1="+arg1+"&arg2="+arg2+"&arg3="+arg3+"&arg4="+arg4+"&arg5="+arg5;
+				var serversdresse = server+"modelGEN.php?timtest="+Math.floor((Math.random()*100)+1)+"&TOKEN="+ACCESSTOKEN+"&script="+script+"&material="+material+"&turntable="+turntable+"&arg0="+arg0+"&arg1="+arg1+"&arg2="+arg2+"&arg3="+arg3+"&arg4="+arg4+"&arg5="+arg5;
 				console.log(serversdresse);
 				//abort any previous ajax.
 				 if(xhr && xhr.readystate != 4){
@@ -323,7 +251,7 @@ var renderTurntable = "False";
 					};
 					var loader = new THREE.OBJMTLLoader( manager);
 					//If no still frames are rendered then display 3D model.
-					console.log(obj.BlenderOutput);
+					console.log(obj.Output);
 					//set the jewlery image adress and also set the folder adress.
 					//set uniqe ID just incase it changed by the server. sometimes this happens if the model is alredy cached.
 					var uniqueID = obj.FolderNumber;
@@ -345,7 +273,7 @@ var renderTurntable = "False";
 								  
 								  child.geometry.mergeVertices()
 								  assignUVs(child.geometry);
-								   child.material = material2;
+								   //child.material = material2;
 									child.verticesNeedUpdate = true;
 								  child.normalsNeedUpdate = true;
 								  child.uvsNeedUpdate = true;
