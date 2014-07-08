@@ -18,8 +18,8 @@ For the full API Refrnece guide, see here:<br>
 http://www.polychemy.com/php/PolychemyAPI.php
 </center>
 
-How Does it Work?
-=================
+<h1>How Does it Work?</h1>
+
 1)Authenticate your self with your [USER KEY]<br>
 2)Send a request to customize Polychemy Jewerly. (material, size, custom text, Jewlery type etc)<br>
 3)Our system will create a 3D Model of the Jewlery you requested. A link to download a low res OBJ file will be returned to you. (alternatively you can request a turntable render instead)<br>
@@ -28,8 +28,8 @@ How Does it Work?
 5)After payment has been cleared, we will manufacture and drop ship your Item.<br>
 
 
-A Basic Example
-===========
+<h1>A Basic Example</h1>
+
 Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
 
 <b>1) Authenticate your self.</b><br>
@@ -135,6 +135,6 @@ http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=5<br>
 
 Where "ID" Is the FolderNumber you recive from the JSNOP response and "num" is the image number.
 
-Placing Orders
-=============
+<h1>Placing Orders</h1>
+
 Coming Soon..
