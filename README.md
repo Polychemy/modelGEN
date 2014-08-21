@@ -1,4 +1,4 @@
-<h1>modelGEN</h1>
+<h1>modelGEN 2.01</h1>
 
 
 Polychemy's Model Generator API. <br>
@@ -55,7 +55,7 @@ If Authentication is sucessful, you will recieve a numerical ACCESS TOKEN.
 Next step is to customize the jewelry<br>
 Send a GET Request to our modelGEN server :<br>
 <code>
-http://polychemy3d.com/modelGEN.php?TOKEN=3846283&script=RomanRing.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
+http://polychemy3d.com/modelGEN2.php?TOKEN=3846283&script=RomanRing.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
 </code>
 <p>
 TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
