@@ -30,7 +30,7 @@ http://www.polychemy.com/php/PolychemyAPI.php
 
 <h1>A Basic Example</h1>
 
-Let's create a <a href="http://www.polychemy.com/RomanRing.php">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
+Let's create a <a href="http://www.polychemy.com/Jewelry.php?name=ROMANRING">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
 
 <b>1) Authenticate your self.</b><br>
 Use your USER KEY to genrate a acess token that you can use on our apps.<br>
