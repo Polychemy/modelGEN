@@ -21,7 +21,7 @@
 	var JewelryX = 0;
 	var JewelryY = 0;
 	var JewelryZ = 0;
-	var JewelryRX = deg2rad(-35);
+	var JewelryRX = 0;
 	var JewelryRY = 0;
 	var JewelryRZ = 0;
 
@@ -98,7 +98,7 @@ var renderTurntable = "False";
 				
 
 				//Send request to polychemy servers.
-				execScript(script,renderTurntable, Materialfield.value, CustomText.value, RingSize.value, "", "")
+				execScript(script,renderTurntable, CustomText.value, Materialfield.value, RingSize.value, "", "")
 			}
 			
 			//Create 3D Context
@@ -136,6 +136,9 @@ var renderTurntable = "False";
 				// SCENE
 
 				scene = new THREE.Scene();
+				
+				//material
+				material =  new THREE.MeshLambertMaterial({color: 'blue'  });
 
 
 			//create lights
@@ -213,7 +216,7 @@ var renderTurntable = "False";
 				loadedmodel = new THREE.Mesh();
 				//this fucnction send a jsnop request to server. 
 				//The adressse to generate the 3D model.
-				var serversdresse = server+"modelGEN.php?timtest="+Math.floor((Math.random()*100)+1)+"&TOKEN="+ACCESSTOKEN+"&script="+script+"&material="+material+"&turntable="+turntable+"&arg0="+arg0+"&arg1="+arg1+"&arg2="+arg2+"&arg3="+arg3+"&arg4="+arg4+"&arg5="+arg5;
+				var serversdresse = server+"modelGEN2.php?timtest="+Math.floor((Math.random()*100)+1)+"&TOKEN="+ACCESSTOKEN+"&script="+script+"&turntable="+turntable+"&arg0="+material+"&arg1="+arg0+"&arg2="+arg1+"&arg3="+arg2+"&arg3="+arg3+"&arg4="+arg4+"&arg5="+arg5;
 				console.log(serversdresse);
 				//abort any previous ajax.
 				 if(xhr && xhr.readystate != 4){
@@ -273,7 +276,7 @@ var renderTurntable = "False";
 								  
 								  child.geometry.mergeVertices()
 								  assignUVs(child.geometry);
-								   //child.material = material2;
+								   child.material = material;
 									child.verticesNeedUpdate = true;
 								  child.normalsNeedUpdate = true;
 								  child.uvsNeedUpdate = true;
@@ -283,6 +286,7 @@ var renderTurntable = "False";
 									//child.geometry.computeMorphNormals();
 									child.geometry.computeTangents();
 									child.material.shading = THREE.SmoothShading;
+									
 							  }
 								
 							  
@@ -311,37 +315,30 @@ var renderTurntable = "False";
 						//reset the still image counter to 0
 						stillFrameNumber = 0;
 						//if still frame are rendered then we will display still frame instead.
-						stillImage(obj.StillRender);
-						StillRender = obj.StillRender;
-						stillInterval=setInterval(function(){stillImage(obj.StillRender)},4000);
-						
+						stillImage(obj.GIFRender);
+						StillRender = obj.GIFRender;
+						 //update the price.
+						  setPrice(obj);
 						
 					}
 				}
 				
 				function setPrice(obj){
 					var Materialfield = document.getElementById("Material");
-					console.log(Materialfield.value);
-					if(Materialfield.value=="Gold_Plated_Brass"){
-						updateStatus("Price:"+ obj.GoldPlateRetail);
-					}else if(Materialfield.value=="Sterling_Silver"){
-						updateStatus("Price:"+ obj.SilverRetail);
-					}
+						updateStatus("Price:"+ obj.MetalRetail[Materialfield.value]);
+
 				
 				}
 			
 			  function stillImage(StillRender){
 				  
-				  //if still frame are rendered then we will display still frame instead.
-				  console.log("url('"+StillRender+"&num="+stillFrameNumber+"')");
-				  var display = document.getElementById("3DDisplay");
-				  display.style.backgroundImage="url('"+StillRender+"&num="+stillFrameNumber+"')";
-				  display.style.backgroundSize="350px 350px";
-				  display.style.opacity = 1;
-				  stillFrameNumber++;
-				  if(stillFrameNumber>5){
-					  stillFrameNumber=0;
-				  }
+						
+					//if still frame are rendered then we will display still frame instead.
+					console.log("url('"+StillRender+"')");
+					var display = document.getElementById("3DDisplay");
+					display.style.backgroundImage="url('"+StillRender+"')";
+					display.style.backgroundSize="350px 350px";
+					display.style.opacity = 1;
 			  }
 				  
 			
