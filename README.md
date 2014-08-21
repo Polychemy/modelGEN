@@ -72,20 +72,22 @@ The JSNOP Response:<br>
 create3DModel(<br>
 <br>
 	{<br>
-		"Output": "SUCESS",<br>
-		"file": "DONE", <br>
-		"material": "DONE", <br>
-		"StillRender": "http://54.191.4.213/ModelDATABASE.php?getfile=PNG&ID=584351", <br>
-		"FolderNumber": "584351", <br>
-		"AppCallID": "108523", <br>			
-		"boundingX": "19.795589447021484",<br>
-		"boundingY": "7.932041168212891",<br>
-		"boundingZ": "19.830873489379883",<br>
-		"volume": "0.3737025921655804",<br>
-		"GoldPlateWholesale": "83",<br>
-		"GoldPlateRetail": "109.99",<br>
-		"SilverWholesale": "99",<br>
-		"SilverRetail": "129.99"<br>
+create3DModel({"Output": "3D Generated.",
+"file": "http://polychemy3d.com/ModelDATABASE.php?getfile=OBJ&ID=397025", 
+"material": "http://polychemy3d.com/ModelDATABASE.php?getfile=MTL&ID=397025", 
+"StillRender": "http://polychemy3d.com/ModelDATABASE.php?getfile=JPG&ID=397025", 
+"GIFRender": "http://polychemy3d.com/ModelDATABASE.php?getfile=GIF&ID=397025", 
+"FolderNumber": "397025", 
+"AppCallID": "1000", 
+"boundingX": "19.14330291748047",
+"boundingY": "19.143306732177734",
+"boundingZ": "7.820871353149414",
+"volume": "0.3152120162768044",
+
+"MetalWholesale": {"Sterling_Silver":86,"Solid_Gold_14k":201,"Solid_Gold_18k":201,"White_Gold_18k":201,"Rose_Gold_18k":201,"Palladium900":289,"Platinium999":622}, 
+
+"MetalRetail": {"Sterling_Silver":119.99,"Solid_Gold_14k":279.99,"Solid_Gold_18k":279.99,"White_Gold_18k":279.99,"Rose_Gold_18k":279.99,"Palladium900":399.99,"Platinium999":839.99}, 
+
 	}<br>
 <br>
 );<br>
@@ -96,10 +98,11 @@ Important Variables:<br>
 file - <em>The URL to download the 3d OBJ file.</em><br>
 material - <em>the material file assosiatd with this OBJ.</em><br>
 StillRender - <em>A single still render of the genrated design in PNG with alpha.</em><br>
+GifRender - <em>A rendered GIF turntable with a white BG.</em><br>
 Bounding X,Y,Z - <em>The width, height and depth of the jwelry in mm.</em><br>
 Volume - <em>The total volume ammount of this design.</em><br>
-WholeSalePrice - <em>The wholesale price for this design.</em><br>
-Recommened Retail Price. - <em>The recommened retail price for this design.</em><br>
+MetalWholesale - <em>The wholesale prices for the different aviable metals.</em><br>
+MetalRetail. - <em>The recommened retail price for the different aviable prices.</em><br>
 FolderNumber - <em>Used to identify the model. Also known as the Model ID.</em><p>
 
 <b>2)Downloading 3D Model File.</b><br>
@@ -117,24 +120,11 @@ And now you're done! All you need to do now is build a WEBGL viewer to view the 
 <b>2b)Rendering a Turntable.</b><br>
 
 Rendering a still image turntable is especially useful if the user does not support WebGL.<br>
-set turntable variable too "True" (Case Sensitive) and our system will render 6 images of the jewelry design in different rotations (1 full revolution).<br>
+set turntable variable too "True" (Case Sensitive) and our system will render 1 full revolution (looping) GIF turntable.<br>
 
-You can then download these PNG images (with alpha) and display it on your borwser if nessary.<br>
-Here's an example GET request that will trigger a turntable render:<br>
-<p>
-<code>
-http://polychemy3d.com/modelGEN.php?TOKEN=3846283&script=NameNecklace.py&turntable=True&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
-</code>
-</p>
-Download these images like these:<br>
-http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=0<br>
-http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=1<br>
-http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=2<br>
-http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=3<br>
-http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=4<br>
-http://polychemy3d.com/ModelDATABASE.php?getfile=PNG&ID=700695&num=5<br>
+http://polychemy3d.com/ModelDATABASE.php?getfile=GIF&ID=397025
 
-Where "ID" Is the FolderNumber you recive from the JSNOP response and "num" is the image number.
+Where "ID" Is the FolderNumber you recive from the JSNOP response. You can also get this adress from the GIFRender variable from teh Json response.
 
 <h1>Placing Orders</h1>
 
