@@ -62,8 +62,13 @@ Polychemy Roman Rings are made just for you and personalised to you taste.<br />
 Custom Text : <input name="CustomText" id="CustomText" type="text" value="Love" size="20" maxlength="8" style=" width:250px;" /><br />
 Material : 
   <select name="Material" id="Material" style=" width:250px;" id="ChosenMaterial" >
-      <option selected value="Gold_Plated_Brass" >Gold Plated</option>
-      <option value="Sterling_Silver" >Sterling Silver</option>
+                  <option value="Sterling_Silver" >Sterling Silver</option>
+                  <option value="Solid_Gold_14k" >14k Yellow Gold</option>
+                  <option value="Solid_Gold_18k" >18k Yellow Gold</option>
+                   <option value="White_Gold_18k" >18k White Gold</option>
+                    <option value="Rose_Gold_18k" >18k Rose Gold</option>
+                     <option value="Palladium900" >Palladium 900</option>
+                      <option value="Platinium999" >Platinium 999</option>
   </select><br />
 
 
