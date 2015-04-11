@@ -110,6 +110,3 @@ http://polychemy3d.com/ModelDATABASE.php?getfile=GIF&ID=397025
 
 Where "ID" Is the FolderNumber you recive from the JSNOP response. You can also get this adress from the GIFRender variable from teh Json response.
 
-<h1>Placing Orders</h1>
-
-Coming Soon..
