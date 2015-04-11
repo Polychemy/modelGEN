@@ -7,7 +7,7 @@
 Polychemy's Model Generator API. <br>
 The modelGEN API allows anyone to create and customize any of the available Polychemy Jewelry.
 
-This API requires an USER KEY, for access.
+This API requires your IP to be white listed, for access.
 If you are intrested in implimenting our apps on your site. Do contact us at contact@polychemy.com.
 
 
