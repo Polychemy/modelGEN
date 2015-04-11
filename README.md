@@ -35,25 +35,6 @@ http://www.polychemy.com/php/PolychemyAPI.php
 
 Let's create a <a href="http://www.polychemy.com/Jewelry.php?name=ROMANRING">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
 
-<b>1) Authenticate your self.</b><br>
-Use your USER KEY to genrate a acess token that you can use on our apps.<br>
-Send a GET request to the following URL to recieve a 2 hour acess token:<br>
-<p>
-<code>
-http://polychemy3d.com/ModelDATABASE.php?getaccessKey=[USER KEY]
-</code>
-<p>
-<br>
-Where [USER KEY] is your user key.<br>
-*Keep your user key safe! It's best to request for Access tokens only on serverside scripts like PHP. DO NOT expose your USER KEY to the world wide web!.*
-<p>
-If Authentication is sucessful, you will recieve a numerical ACCESS TOKEN.
-<p>
-<code>
-434234365
-</code>
-<p>
-
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Next step is to customize the jewelry<br>
 Send a GET Request to our modelGEN server :<br>
