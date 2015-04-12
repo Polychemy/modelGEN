@@ -36,7 +36,7 @@ Let's create a <a href="http://www.polychemy.com/Personalised-Jewellery/Roman_Na
 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Next step is to customize the jewelry<br>
-Send a POST Request with variable "command", to our modelGEN server :<br>
+Send a POST Request with variable "command", to our modelGEN server (http://polychemy3d.com/modelGEN3.php):<br>
 
 ```json
 {
