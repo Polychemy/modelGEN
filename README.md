@@ -25,8 +25,8 @@ http://www.polychemy.com/php/PolychemyAPI.php
 
 2)Send a request to customize Polychemy Jewerly. (material, size, custom text, Jewlery type etc)<br>
 3)Our system will create a 3D Model of the Jewlery you requested. A link to download a low res OBJ file will be returned to you. (alternatively you can request a turntable GIF render instead)<br>
-5)Display your custom 3D Jewelry Design on a browser with WEBGL or any other display system of your choice.<br>
-4)Place order on our Order API.<br>
+5)Display your custom 3D Jewelry Design on a browser with your WEBGL or any other display system of your choice.<br>
+4)Place order on our Order API. (Send us the Model ID as well)<br>
 5)After payment has been cleared, we will manufacture and drop ship your Item.<br>
 
 
@@ -75,15 +75,14 @@ And Example POST request in Javascript.
 ```
 
 <p>
-TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
-script - <em>The jwelry design type.</em> <br>
-turnatble - <em>option to render turntable.</em> <br>
-Material <em>Jewelry Material.</em> <br>
-arg0 - <em>unique variables required for this jewelry design. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
-arg2 - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
-arg3 - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+script - <em>The jwelry design type. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em></em> <br>
 
-The JSNOP Response:<br>
+turnatble - <em>option to render turntable. "True" to render GIF animated turntable.</em> <br>
+arguments[0] - <em>unique variables required for this jewelry design. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+arguments[1] - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+arguments[2] - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
+
+The JSNO Response:<br>
 
 <blockquote>
 create3DModel(<br>
@@ -122,24 +121,6 @@ MetalWholesale - <em>The wholesale prices for the different aviable metals.</em>
 MetalRetail. - <em>The recommened retail price for the different aviable prices.</em><br>
 FolderNumber - <em>Used to identify the model. Also known as the Model ID.</em><p>
 
-<b>2)Downloading 3D Model File.</b><br>
-In the next step, we would want to download the 3d model file or stream it to a webGL viewer.<br>
-
-To Download the obj file send GET Request too:<p>
-<code>http://54.191.4.213/ModelDATABASE.php?getfile=PNG&ID=584351</code>
-<p>
-getfile - <em>File type.</em> <br>
-ID - <em> The FolderNumber you recieve from the JSNOP response. </em>
-<p>
-This will return the OBJ file for download.
-And now you're done! All you need to do now is build a WEBGL viewer to view the 3D file, and a simple interface to customizae tthe jwelry<br>
-<p>
-<b>2b)Rendering a Turntable.</b><br>
-
-Rendering a still image turntable is especially useful if the user does not support WebGL.<br>
-set turntable variable too "True" (Case Sensitive) and our system will render 1 full revolution (looping) GIF turntable.<br>
-
-http://polychemy3d.com/ModelDATABASE.php?getfile=GIF&ID=397025
-
-Where "ID" Is the FolderNumber you recive from the JSNOP response. You can also get this adress from the GIFRender variable from teh Json response.
+With this information you should be abelto download the OBJ file to your display system.</br>
+During checkout, be sure to pass the FolderNumber to us, for mnaufacture.
 
