@@ -1,16 +1,15 @@
 // JavaScript Document
+//check if wbgl exists if not, print error then 
+var webglenabled = true;
+if ( ! Detector.webgl ){
+	var webglenabled = false;
+}else{
+	var webglenabled = true;
+
+}
 
 
-//Important Variables, change this to customise the app:
-	var script = "RomanRing.py";
-	var material = "";
-	var arg0 = "";
-	var arg1 = "";
-	var arg2 = "";
-	var arg3 = "";
-	var arg4 = "";
-	var arg5 = "";
-	
+
 	//Set the 3D Diplsay's width and height.
 	
 	var canvaswidth = 500;
@@ -46,11 +45,13 @@ var renderTurntable = "False";
 			var effectFXAA;
 
 			var group, material, material2,loadedmodel;
+			
+			var materials = new Array();
 
 			var MaterialType = 1;
 
 
-			var defaultShader = "false";
+			var defaultShader = "true";
 
 
 		
@@ -89,18 +90,7 @@ var renderTurntable = "False";
 			
 			
 			
-			//The main FUnction that creates the jewelry.
-			function createJewelry(){
-				//retrive values form our form fields
-				var CustomText = document.getElementById("CustomText");
-				var Materialfield = document.getElementById("Material");
-				var RingSize = document.getElementById("RingSize");
-				
 
-				//Send request to polychemy servers.
-				execScript(script,renderTurntable, CustomText.value, Materialfield.value, RingSize.value, "", "")
-			}
-			
 			//Create 3D Context
 		function init() {
 				
@@ -134,7 +124,6 @@ var renderTurntable = "False";
 				camera.lookAt( cameraTarget );
 
 				// SCENE
-
 				scene = new THREE.Scene();
 				
 				//material
@@ -185,7 +174,7 @@ var renderTurntable = "False";
 				group.add(plane);
 
                 //load and display the default text.
-				createJewelry();
+				execScript2();
 
 				// RENDERER
 
@@ -207,35 +196,42 @@ var renderTurntable = "False";
 			
 			
 			//Send request to polychemy Servers.
-			function execScript(script, turntable,material, arg0, arg1, arg2, arg3, arg4, arg5){
-				updateStatus("Loading..")
+			function execScript2(){
+				updateStatus("Laoding..")
 
 				//remove loaded model if it alredy exists
 				group.remove( loadedmodel );
 				//create group for assesories.
 				loadedmodel = new THREE.Mesh();
+				
+				//get values from input boxes.
+				var material = document.getElementById("Material");
+				var RingSize = document.getElementById("RingSize");
+				var Text = document.getElementById("CustomText");
+				
+				//phase variables for post request.
+				var Jewelry=new Object();
+				Jewelry.script = "RomanRing.py";
+				Jewelry.turntable = renderTurntable;
+				Jewelry.arguments = [Text.value,material.value,RingSize.value];
+				
+				//stringify jewelry object
+				stringify = JSON.stringify(Jewelry);
+				console.log(stringify);
 				//this fucnction send a jsnop request to server. 
-				//The adressse to generate the 3D model.
-				var serversdresse = server+"modelGEN2.php?timtest="+Math.floor((Math.random()*100)+1)+"&TOKEN="+ACCESSTOKEN+"&script="+script+"&turntable="+turntable+"&arg0="+material+"&arg1="+arg0+"&arg2="+arg1+"&arg3="+arg2+"&arg3="+arg3+"&arg4="+arg4+"&arg5="+arg5;
-				console.log(serversdresse);
-				//abort any previous ajax.
-				 if(xhr && xhr.readystate != 4){
-					  xhr.abort();
-				  }
-				  ///////////////////////////Call CLoud 3D///////////////////////
-					//send request to create text.
-					console.log("Creating Jewelry..");
-					  xhr = $.ajax({
-					  url: serversdresse,
-					  type: 'GET',
-					  timeout:50000,
-					  async: true,
-					  cache: false,
-					  dataType: "jsonp",
-					  contentType: "text/javascript",
-					  crossDomain: true,
-					  
-				  });
+				//We will recieve the URL of the genrated model.
+				
+				  $.ajax({
+						type:"POST",
+						url: "http://polychemy3d.com/modelGEN3.php",
+						dataType: "json",
+						data:{command:stringify},
+						success: function (response){
+							//create the 3d model
+							create3DModel(response)
+							
+						}
+					});
 				
 				
 			}
@@ -258,6 +254,8 @@ var renderTurntable = "False";
 					//set the jewlery image adress and also set the folder adress.
 					//set uniqe ID just incase it changed by the server. sometimes this happens if the model is alredy cached.
 					var uniqueID = obj.FolderNumber;
+					updateStatus("Done");
+					
 					if(renderTurntable=="False"){
 						///////////////////LOAD MDOEL////////////////////
 						console.log(uniqueID);
@@ -270,34 +268,17 @@ var renderTurntable = "False";
 					  object.traverse( function ( child ) {
 	
 						  if ( child instanceof THREE.Mesh ) {
-							  //child is mesh
-							  
-							  if(defaultShader=="false"){
-								  
-								  child.geometry.mergeVertices()
-								  assignUVs(child.geometry);
-								   child.material = material;
-									child.verticesNeedUpdate = true;
-								  child.normalsNeedUpdate = true;
-								  child.uvsNeedUpdate = true;
-								  child.geometry.computeCentroids();
-								   child.geometry.computeFaceNormals();
-								  //  child.geometry.computeVertexNormals();
-									//child.geometry.computeMorphNormals();
-									child.geometry.computeTangents();
-									child.material.shading = THREE.SmoothShading;
-									
-							  }
-								
-							  
+							   //child is mesh
+								//if there is a image texture, we replace it with the correct address  
+									material4 = new THREE.MeshLambertMaterial();
+									child.material = material4;
+
 						  }
 	
 					  } );
 					  
 					  //Add the Assosry to its own group. So that we can control the position later.
 					  loadedmodel.add(object);
-					  //update the price.
-					  setPrice(obj);
 					  
 				  } );
 				  loadedmodel.scale = new THREE.Vector3( JewelryScale, JewelryScale, JewelryScale );
@@ -317,18 +298,10 @@ var renderTurntable = "False";
 						//if still frame are rendered then we will display still frame instead.
 						stillImage(obj.GIFRender);
 						StillRender = obj.GIFRender;
-						 //update the price.
-						  setPrice(obj);
 						
 					}
 				}
 				
-				function setPrice(obj){
-					var Materialfield = document.getElementById("Material");
-						updateStatus("Price:"+ obj.MetalRetail[Materialfield.value]);
-
-				
-				}
 			
 			  function stillImage(StillRender){
 				  
@@ -340,6 +313,10 @@ var renderTurntable = "False";
 					display.style.backgroundSize="350px 350px";
 					display.style.opacity = 1;
 			  }
+				  
+				  
+			
+	
 				  
 			
 				function onDocumentMouseMove( event ) {
@@ -370,6 +347,8 @@ var renderTurntable = "False";
 					
 				
 			}
+			
+			
 
 			function onDocumentMouseUp( event ) {
                 document.body.style.cursor = "auto";
@@ -424,8 +403,7 @@ document.body.style.cursor = "auto";
 			}
 			
 		function updateStatus(text){
-			var statustext = document.getElementById("status");
-			statustext.innerHTML = text;
+			console.log("--"+text)
 		}
 		
 		function onWindowResize() {
@@ -477,4 +455,69 @@ document.body.style.cursor = "auto";
 			  geometry.uvsNeedUpdate = true;
 		  
 		  }
+		  
+		  	
+			function createShader(name, matcap){
+						  var material5 = new THREE.ShaderMaterial({
+						uniforms: {
+							tNormal: {
+								type: 't',
+								value: THREE.ImageUtils.loadTexture('http://www.polychemy.com/matcap/normal/243-normal.jpg')
+							},
+							tMatCap: {
+								type: 't',
+								value: THREE.ImageUtils.loadTexture('http://www.polychemy.com/matcap/'+matcap+'.jpg')
+							},
+							time: {
+								type: 'f',
+								value: 0
+							},
+							bump: {
+								type: 'f',
+								value: 0
+							},
+							noise: {
+								type: 'f',
+								value: .04
+							},
+							repeat: {
+								type: 'v2',
+								value: new THREE.Vector2(1, 1)
+							},
+							useNormal: {
+								type: 'f',
+								value: 0
+							},
+							useRim: {
+								type: 'f',
+								value: 0
+							},
+							rimPower: {
+								type: 'f',
+								value: 2
+							},
+							useScreen: {
+								type: 'f',
+								value: 0
+							},
+							normalScale: {
+								type: 'f',
+								value: .5
+							},
+							normalRepeat: {
+								type: 'f',
+								value: 1
+							}
+						},
+						vertexShader: document.getElementById('vertexShader').textContent,
+						fragmentShader: document.getElementById('fragmentShader').textContent,
+						wrapping: THREE.ClampToEdgeWrapping,
+						shading: THREE.SmoothShading,
+						side: THREE.DoubleSide
+					});
+					material5.uniforms.tMatCap.value.wrapS = material5.uniforms.tMatCap.value.wrapT = THREE.ClampToEdgeWrapping;
+					material5.uniforms.tNormal.value.wrapS = material5.uniforms.tNormal.value.wrapT = THREE.RepeatWrapping;
+					material5.name = name;
+					return material5;
+			}
 		function deg2rad(degree)   { return degree*(Math.PI/180); }
