@@ -161,5 +161,5 @@ MetalRetail. - <em>The recommened retail price for the different aviable prices.
 FolderNumber - <em>Used to identify the model. Also known as the Model ID.</em><p>
 
 With this information you should be abelto download the OBJ file to your display system.</br>
-During checkout, be sure to pass the FolderNumber to us, for mnaufacture.
+During checkout, be sure to pass the FolderNumber to us, for manufacture.
 
