@@ -46,8 +46,33 @@ Send a POST Request with variable "command", to our modelGEN server :<br>
 }
 
 ```
+And Example POST request in Javascript.
+```javascript
+	//phase variables for post request.
+				var Jewelry=new Object();
+				Jewelry.script = "RomanRing.py";
+				Jewelry.turntable = "false";
+				Jewelry.arguments = ["Hello","Sterling_Silver","6"];
+				
+				//stringify jewelry object
+				stringify = JSON.stringify(Jewelry);
+				console.log(stringify);
+				//this fucnction send a jsnop request to server. 
+				//We will recieve the URL of the genrated model.
+				
+				  $.ajax({
+						type:"POST",
+						url: "http://polychemy3d.com/modelGEN3.php",
+						dataType: "json",
+						data:{command:stringify},
+						success: function (response){
+							//reponse is a JSON object with required information to download OBJ file.
+							create3DModel(response)
+							
+						}
+					});
 
-
+```
 
 <p>
 TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
