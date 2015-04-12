@@ -23,24 +23,32 @@ http://www.polychemy.com/php/PolychemyAPI.php
 
 <h1>How Does it Work?</h1>
 
-1)Authenticate your self with your [USER KEY]<br>
 2)Send a request to customize Polychemy Jewerly. (material, size, custom text, Jewlery type etc)<br>
-3)Our system will create a 3D Model of the Jewlery you requested. A link to download a low res OBJ file will be returned to you. (alternatively you can request a turntable render instead)<br>
-5)Display your custom 3D Jewelry Design on a browser with WEBGL, or just show still images.<br>
-4)Place order on our Orde Que.<br>
+3)Our system will create a 3D Model of the Jewlery you requested. A link to download a low res OBJ file will be returned to you. (alternatively you can request a turntable GIF render instead)<br>
+5)Display your custom 3D Jewelry Design on a browser with WEBGL or any other display system of your choice.<br>
+4)Place order on our Order API.<br>
 5)After payment has been cleared, we will manufacture and drop ship your Item.<br>
 
 
 <h1>A Basic Example</h1>
 
-Let's create a <a href="http://www.polychemy.com/Jewelry.php?name=ROMANRING">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
+Let's create a <a href="http://www.polychemy.com/Personalised-Jewellery/Roman_Name_Ring/">Polychemy Roman Ring</a> in Sterling Silver with the name "Charles".<br>
 
 <b>1) An Example request to the Polychemy Model Gen Server.</b><br>
 Next step is to customize the jewelry<br>
-Send a GET Request to our modelGEN server :<br>
-<code>
-http://polychemy3d.com/modelGEN2.php?TOKEN=3846283&script=RomanRing.py&turntable=false&material=Sterling_Silver&arg0=2&arg1=grace&arg2=grace
-</code>
+Send a POST Request with variable "command", to our modelGEN server :<br>
+
+```json
+{
+	"script":"RomanRing.py",
+	"turntable":"false",
+	"arguments":["Hellow","Sterling_Silver","6"]
+}
+
+```
+
+
+
 <p>
 TOKEN- <em>Your Uniqie access token. (See previous step)</em><br>
 script - <em>The jwelry design type.</em> <br>
