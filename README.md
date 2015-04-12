@@ -23,8 +23,8 @@ http://www.polychemy.com/php/PolychemyAPI.php
 
 <h1>How Does it Work?</h1>
 
-2)Send a request to customize Polychemy Jewerly. (material, size, custom text, Jewlery type etc)<br>
-3)Our system will create a 3D Model of the Jewlery you requested. A link to download a low res OBJ file will be returned to you. (alternatively you can request a turntable GIF render instead)<br>
+2)Send a request to customize Polychemy Jewelry. (material, size, custom text, Jewlery type etc)<br>
+3)Our system will create a 3D Model of the Jewelry you requested. A link to download a low res OBJ file will be returned to you. (alternatively you can request a turntable GIF render instead)<br>
 5)Display your custom 3D Jewelry Design on a browser with your WEBGL or any other display system of your choice.<br>
 4)Place order on our Order API. (Send us the Model ID as well)<br>
 5)After payment has been cleared, we will manufacture and drop ship your Item.<br>
@@ -76,38 +76,33 @@ And Example POST request in Javascript.
 
 <p>
 script - <em>The jwelry design type. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em></em> <br>
-
 turnatble - <em>option to render turntable. "True" to render GIF animated turntable.</em> <br>
 arguments[0] - <em>unique variables required for this jewelry design. See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
 arguments[1] - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
 arguments[2] - <em>unique variables required for this jewelry design.  See API refrence Guide: <a href="http://www.polychemy.com/php/PolychemyAPI.php">here</a>.</em><br>
 
-The JSNO Response:<br>
+The JSON Response:<br>
 
-<blockquote>
-create3DModel(<br>
-<br>
-	{<br>
-create3DModel({"Output": "3D Generated.",
-"file": "http://polychemy3d.com/ModelDATABASE.php?getfile=OBJ&ID=397025", 
-"material": "http://polychemy3d.com/ModelDATABASE.php?getfile=MTL&ID=397025", 
-"StillRender": "http://polychemy3d.com/ModelDATABASE.php?getfile=JPG&ID=397025", 
-"GIFRender": "http://polychemy3d.com/ModelDATABASE.php?getfile=GIF&ID=397025", 
-"FolderNumber": "397025", 
-"AppCallID": "1000", 
-"boundingX": "19.14330291748047",
-"boundingY": "19.143306732177734",
-"boundingZ": "7.820871353149414",
-"volume": "0.3152120162768044",
+```json
 
-"MetalWholesale": {"Sterling_Silver":86,"Solid_Gold_14k":201,"Solid_Gold_18k":201,"White_Gold_18k":201,"Rose_Gold_18k":201,"Palladium900":289,"Platinium999":622}, 
+{
 
-"MetalRetail": {"Sterling_Silver":119.99,"Solid_Gold_14k":279.99,"Solid_Gold_18k":279.99,"White_Gold_18k":279.99,"Rose_Gold_18k":279.99,"Palladium900":399.99,"Platinium999":839.99}, 
+	"Output":"3D CHACHED OUTPUT",
+	"file":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=OBJ&ID=6055587423034013000",
+	"material":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=MTL&ID=6055587423034013000",
+	"StillRender":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=JPG&ID=6055587423034013000",
+	"FolderNumber":"6055587423034013000",
+	"GIFRender":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=GIF&ID=6055587423034013000",
+	"AppCallID":1000,
+	"MetalWholesale":{"Sterling_Silver":92,"Solid_Gold_14k":170,"Solid_Gold_18k":374,"White_Gold_18k":374,"Rose_Gold_18k":374,"Palladium900":227,"Platinium999":419},
+	"MetalRetail":{"Sterling_Silver":119.99,"Solid_Gold_14k":229.99,"Solid_Gold_18k":489.99,"White_Gold_18k":489.99,"Rose_Gold_18k":489.99,"Palladium900":299.99,"Platinium999":549.99},
+	"JemWholesale":{"Diamond":76.5,"Black_Diamond":30.6,"Ruby":30.6,"Blue_Sapphire":25.5,"Yellow_Sapphire":51,"Pink_Sapphire":51,"Emerald":71.4,"Aquamarine":15.3,"Peridot":2.04,"Amethyst":2.04,"Fire_Opal":10.2},
+	"JemRetail":{"Diamond":78.03,"Black_Diamond":31.212,"Ruby":31.212,"Blue_Sapphire":26.01,"Yellow_Sapphire":52.02,"Pink_Sapphire":52.02,"Emerald":72.828,"Aquamarine":15.606,"Peridot":2.0808,"Amethyst":2.0808,"Fire_Opal":10.404}
 
-	}<br>
-<br>
-);<br>
-</blockquote>
+}
+
+
+```
 
 <br>
 Important Variables:<br>
