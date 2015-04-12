@@ -1,6 +1,3 @@
-[THIS API HAS BEEN temporarly DISCONTINUED.]
-[Please see Polychemy Embed App API for more information.]
-
 <h1>modelGEN 2.01</h1>
 
 
