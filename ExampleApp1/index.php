@@ -1,39 +1,8 @@
-<?php
-//Your Iser Key:
-$UserKey = "POLYCHEMY";
-// Get cURL resource
-$curl = curl_init();
-// Send UserKey
-curl_setopt_array($curl, array(
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'http://polychemy3d.com/ModelDATABASE.php?getaccessKey='.$UserKey,
-    CURLOPT_USERAGENT => 'Access Token Request'
-));
-// Send the request & save response to $resp
-$resp = curl_exec($curl);
-// Close request to clear up some resources
-curl_close($curl);
-
-//If Authentication is not scessuful, we will terminate the script
-If($resp!="AUTHENTICATION FAILURE"){
-	$accessToken = $resp;
-}else{
-	exit("Authentication Failure");
-	
-}
-
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Polychemy - Roman Ring</title>
-
-<script type="text/javascript">
-//We pass the Access token from the PHP cURL script too our jaavscript.
-var ACCESSTOKEN = "<?php echo $accessToken ?>";
-</script>
 
 
 <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script> 
@@ -47,10 +16,7 @@ var ACCESSTOKEN = "<?php echo $accessToken ?>";
 
 <h1>Polychemy Roman Ring</h1>
 
-<em>Polychemy's Roman rings are for the Royal at heart. <br />
-Customized with 3D printing, and casted in a variety of precious metals, and polished to a mirror finish. Each ring custom made just for you.<br />
-Personalise this Roman ring and have your name made into our ring’s Design.<br />
-Polychemy Roman Rings are made just for you and personalised to you taste.<br /></em>
+<em>Customize this ring with name of your choice.</em>
 
 <p>
 <div id="3DDisplay" style="width:500px; height:300px;background-repeat:no-repeat;background-position:center;"  onmousedown="MouseDown3DDisplay(event)"></div>
@@ -98,7 +64,7 @@ Material :
           </select>
 
 <br /><p>
-<input name="Refresh" type="button" value="Refresh"  style="width:350px;" onmouseup="createJewelry();"/>
+<input name="Refresh" type="button" value="Refresh"  style="width:350px;" onmouseup="execScript2();"/>
 
 
 	<script src="js/three.js"></script>
