@@ -250,7 +250,7 @@ var renderTurntable = "False";
 					};
 					var loader = new THREE.OBJMTLLoader( manager);
 					//If no still frames are rendered then display 3D model.
-					console.log(obj.Output);
+					console.log(obj.ModelData.volume);
 					//set the jewlery image adress and also set the folder adress.
 					//set uniqe ID just incase it changed by the server. sometimes this happens if the model is alredy cached.
 					var uniqueID = obj.FolderNumber;
