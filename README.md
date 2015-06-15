@@ -81,68 +81,68 @@ arguments[2] - <em>unique variables required for this jewelry design.  See API r
 The JSON Response:<br>
 
 ```json
+
 {
 
 "Output":"3D CHACHED OUTPUT",
-"file":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=OBJ&ID=6055587423034013000",
-"material":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=MTL&ID=6055587423034013000",
-"StillRender":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=JPG&ID=6055587423034013000",
-"FolderNumber":"6055587423034013000",
-"GIFRender":"http:\/\/polychemy3d.com\/ModelDATABASE.php?getfile=GIF&ID=6055587423034013000",
-"AppCallID":684,
-
+"file":"http://polychemy3d.com/ModelDATABASE.php?getfile=OBJ&ID=684923917",
+"material":"http://polychemy3d.com/ModelDATABASE.php?getfile=MTL&ID=684923917",
+"StillRender":"http://polychemy3d.com/ModelDATABASE.php?getfile=JPG&ID=684923917",
+"FolderNumber":"684923917",
+"GIFRender":"http://polychemy3d.com/ModelDATABASE.php?getfile=GIF&ID=684923917",
+"AppCallID":64,
 "ModelData":{
-	"offsetX":"0",
-	"offsetY":"0",
-	"offsetZ":"0",
-	"boundingX":"19.14330291748047",
-	"boundingY":"19.143306732177734",
-	"boundingZ":"7.820871353149414",
-	"volume":"0.3061303478390818"
+"offsetX":"0",
+"offsetY":"0",
+"offsetZ":"0",
+"boundingX":"19.14330291748047",
+"boundingY":"19.143306732177734",
+"boundingZ":"7.820871353149414",
+"volume":"0.369319277103568"
 },
 "MetalWholesale":{
-	"Sterling_Silver":92,
-	"Solid_Gold_14k":170,
-	"Solid_Gold_18k":374,
-	"White_Gold_18k":374,
-	"Rose_Gold_18k":374,
-	"Palladium900":227,
-	"Platinium999":419
+"Sterling_Silver":73,
+"Solid_Gold_14k":171,
+"Solid_Gold_18k":514,
+"White_Gold_18k":514,
+"Rose_Gold_18k":514,
+"Palladium900":266,
+"Platinium999":534
 },
 "MetalRetail":{
-	"Sterling_Silver":119.99,
-	"Solid_Gold_14k":229.99,
-	"Solid_Gold_18k":489.99,
-	"White_Gold_18k":489.99,
-	"Rose_Gold_18k":489.99,
-	"Palladium900":299.99,
-	"Platinium999":549.99
+"Sterling_Silver":99.99,
+"Solid_Gold_14k":229.99,
+"Solid_Gold_18k":669.99,
+"White_Gold_18k":669.99,
+"Rose_Gold_18k":669.99,
+"Palladium900":349.99,
+"Platinium999":699.99
 },
 "JemWholesale":{
-	"Diamond":76.5,
-	"Black_Diamond":30.6,
-	"Ruby":30.6,
-	"Blue_Sapphire":25.5,
-	"Yellow_Sapphire":51,
-	"Pink_Sapphire":51,
-	"Emerald":71.4,
-	"Aquamarine":15.3,
-	"Peridot":2.04,
-	"Amethyst":2.04,
-	"Fire_Opal":10.2
+"Diamond":76.5,
+"Black_Diamond":30.6,
+"Ruby":30.6,
+"Blue_Sapphire":25.5,
+"Yellow_Sapphire":51,
+"Pink_Sapphire":51,
+"Emerald":71.4,
+"Aquamarine":15.3,
+"Peridot":2.04,
+"Amethyst":2.04,
+"Fire_Opal":10.2
 },
 "JemRetail":{
-	"Diamond":78.03,
-	"Black_Diamond":31.212,
-	"Ruby":31.212,
-	"Blue_Sapphire":26.01,
-	"Yellow_Sapphire":52.02,
-	"Pink_Sapphire":52.02,
-	"Emerald":72.828,
-	"Aquamarine":15.606,
-	"Peridot":2.0808,
-	"Amethyst":2.0808,
-	"Fire_Opal":10.404
+"Diamond":78.03,
+"Black_Diamond":31.212,
+"Ruby":31.212,
+"Blue_Sapphire":26.01,
+"Yellow_Sapphire":52.02,
+"Pink_Sapphire":52.02,
+"Emerald":72.828,
+"Aquamarine":15.606,
+"Peridot":2.0808,
+"Amethyst":2.0808,
+"Fire_Opal":10.404
 }
 }
 
